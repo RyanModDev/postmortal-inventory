@@ -17,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 public class LivingEntityMixin {
 
     @ModifyVariable(method = "tryUseTotem", ordinal = 0, at = @At(value = "LOAD", ordinal = 0))
-    public ItemStack mixin(ItemStack orig) {
+    public ItemStack inventoryTotemMixin(ItemStack orig) {
         PostmortalInventoryMod.LOGGER.info("mixin called");
 
         if (orig == null && ((Object) this) instanceof ServerPlayerEntity player) {
