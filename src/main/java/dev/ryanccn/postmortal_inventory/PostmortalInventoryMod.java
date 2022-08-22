@@ -1,9 +1,5 @@
 package dev.ryanccn.postmortal_inventory;
 
-import net.fabricmc.fabric.api.entity.event.v1.ServerPlayerEvents;
-
-import net.minecraft.entity.damage.DamageSource;
-import net.minecraft.server.network.ServerPlayerEntity;
 import org.quiltmc.loader.api.ModContainer;
 import org.quiltmc.qsl.base.api.entrypoint.ModInitializer;
 
@@ -19,9 +15,5 @@ public class PostmortalInventoryMod implements ModInitializer {
     @Override
     public void onInitialize(ModContainer mod) {
         LOGGER.info("Voila");
-
-        ServerPlayerEvents.ALLOW_DEATH.register((ServerPlayerEntity player, DamageSource damageSource, float damageAmount) -> {
-            return Handler.allowPlayerDeath(player);
-        });
     }
 }
