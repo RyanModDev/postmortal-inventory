@@ -15,7 +15,8 @@
         "issues": "https://github.com/ryanccn/postmortal-inventory/issues",
         "sources": "https://github.com/ryanccn/postmortal-inventory"
       },
-      "icon": "assets/postmortal_inventory/icon.png"
+      "icon": "assets/postmortal_inventory/icon.png",
+      "license": "MIT"
     },
     "intermediate_mappings": "net.fabricmc:intermediary",
     "entrypoints": {
