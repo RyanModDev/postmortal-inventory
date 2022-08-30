@@ -1,0 +1,25 @@
+name: Update Quilt libraries
+
+on:
+  schedule:
+    - cron: 0 0 * * 0
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  deps:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: RyanModDev/quilted-dependabot@v0
+      - uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: 'chore(deps): update libraries'
+          author: 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
+          committer: 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
+          branch: quilted-dependabot
+          title: 'Update libraries'
+          body: 'because yes'
