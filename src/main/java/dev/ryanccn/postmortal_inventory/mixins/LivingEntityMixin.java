@@ -15,12 +15,11 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin {
 
-    @ModifyVariable(method = "tryUseTotem", index = 1, at = @At(value = "LOAD", ordinal = 2))
+    @ModifyVariable(method = "tryUseTotem", index = 2, at = @At(value = "LOAD", ordinal = 0))
     public ItemStack inventoryTotemMixin(ItemStack orig) {
-
         if (orig == null && ((Object) this) instanceof ServerPlayerEntity player) {
             Inventory inv = player.getInventory();
- 
+
             for (int i = 0; i < inv.size(); i++) {
                 ItemStack stk = inv.getStack(i);
 
