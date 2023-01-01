@@ -1,42 +1,43 @@
 [versions]
 minecraft = "1.19.3"
-quilt_mappings = "1.19.3+build.2"
-quilt_loader = "0.17.4"
-quilted_fabric_api = "5.0.0-alpha.3+0.68.1-1.19.3"
+quilt_mappings = "1.19.3+build.11"
+quilt_loader = "0.18.1-beta.26"
+quilted_fabric_api = "5.0.0-alpha.1+0.65.2-1.19.3"
 
 [libraries.minecraft]
 module = "com.mojang:minecraft"
 
-[libraries.minecraft.version]
-ref = "minecraft"
+  [libraries.minecraft.version]
+  ref = "minecraft"
 
 [libraries.quilt_mappings]
 module = "org.quiltmc:quilt-mappings"
 
-[libraries.quilt_mappings.version]
-ref = "quilt_mappings"
+  [libraries.quilt_mappings.version]
+  ref = "quilt_mappings"
 
 [libraries.quilt_loader]
 module = "org.quiltmc:quilt-loader"
 
-[libraries.quilt_loader.version]
-ref = "quilt_loader"
+  [libraries.quilt_loader.version]
+  ref = "quilt_loader"
 
 [libraries.quilted_fabric_api]
 module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api"
 
-[libraries.quilted_fabric_api.version]
-ref = "quilted_fabric_api"
+  [libraries.quilted_fabric_api.version]
+  ref = "quilted_fabric_api"
 
 [libraries.quilted_fabric_api_deprecated]
 module = "org.quiltmc.quilted-fabric-api:quilted-fabric-api-deprecated"
 
-[libraries.quilted_fabric_api_deprecated.version]
-ref = "quilted_fabric_api"
+  [libraries.quilted_fabric_api_deprecated.version]
+  ref = "quilted_fabric_api"
 
 [bundles]
-quilted_fabric_api = ["quilted_fabric_api", "quilted_fabric_api_deprecated"]
+quilted_fabric_api = [ "quilted_fabric_api", "quilted_fabric_api_deprecated" ]
 
 [plugins.quilt_loom]
 id = "org.quiltmc.loom"
 version = "1.0.+"
+
